@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clash Royale Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="menu">
+    <h1>Clash Royale Web</h1>
+    <div id="deckBuilder"></div>
+    <button id="playButton" onclick="startGame()" disabled>Jogar</button>
+  </div>
+
+  <div id="gameUI" class="hidden">
+    <div class="top-bar">
+      <div class="elixir-bar"><div id="elixirInner"></div></div>
+      <div class="currency">
+        🪙 <span id="coins">0</span> | 💎 <span id="gems">0</span>
+      </div>
+      <div class="timer" id="timer">03:00</div>
+      <div class="score"><span id="playerCrowns">0</span> - <span id="enemyCrowns">0</span></div>
+    </div>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <div class="cards" id="cardBar"></div>
+  </div>
+
+  <div id="resultScreen" class="hidden">
+    <h1 id="resultText"></h1>
+    <button onclick="restartGame()">Reiniciar</button>
+  </div>
+
+  <div id="shop">
+    <h2>Loja de Baús</h2>
+    <button onclick="openChest('common')">Baú Comum (100 🪙)</button>
+    <button onclick="openChest('gold')">Baú de Ouro (500 🪙)</button>
+    <button onclick="openChest('magic')">Baú Mágico (30 💎)</button>
+    <button onclick="openChest('legend')">Baú Lendário (100 💎)</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
